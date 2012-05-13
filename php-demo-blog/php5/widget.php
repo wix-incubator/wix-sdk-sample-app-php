@@ -20,6 +20,11 @@ $widgetSettings->readSettings();
 
     <ul>
         <li>
+            <!-- the href should be formatted as [section-url][app-state], with the specified target from the [target] parameter
+                section-url: the value of the section-url frame parameter
+                app-state: internal state of the application section
+                target: the value of the target frame parameter
+            -->
             <a href="<?php echo $wix->getParentUrl(); ?>/post.show.php?title=<?php echo $post->getTitle(); ?>"
                style="color: #000; font-size: 12px; text-transform: uppercase"
                target="<?php echo $wix->getTarget(); ?>"><?php echo $post->getTitle(); ?></a>
