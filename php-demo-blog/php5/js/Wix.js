@@ -52,5 +52,6 @@ var Wix = (function () {
         }
     }
 })();
+Wix.isAlive();
 
 

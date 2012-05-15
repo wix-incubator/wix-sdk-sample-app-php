@@ -55,7 +55,7 @@ class Wix
     }
 
     /*
-     * returns the parent-url the app should work relative on
+     * returns the section-url the app should work relative on
      * If inside Wix, it'll return the parent url from the query line,
      * else, we'll return the relative REQUEST_URI for this file
      */

@@ -68,7 +68,7 @@ $settings->readSettings();
 
     <!-- EACH POST -->
     <div style="padding-top: 20px; margin: 0 auto; width: 700px;">
-        <!-- Href's should copy the parent-url and work relative to them, they also need to include target="_top" -->
+        <!-- Href's should copy the section-url and work relative to them, they also need to include target="_top" -->
         <a href="<?php echo $wix->getSectionUrl(); ?>/post.show.php?title=<?php echo str_replace(" ", "_", $post->getTitle()); ?>"
            target="<?php echo $wix->getTarget(); ?>"
            style="color: #000; font-size: 28px; text-transform: uppercase"><?php echo $post->getTitle(); ?></a>
