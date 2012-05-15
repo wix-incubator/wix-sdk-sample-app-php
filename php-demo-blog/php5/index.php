@@ -51,7 +51,7 @@ $settings->readSettings();
         });
     </script>
 </head>
-<body style="width: <?php $wix->getWidth() ? $wix->getWidth(). "px" : "auto"; ?>">
+<body style="width: <?php print getWixWidth(); ?>">
 
 <!-- HEADER -->
 <div class="center">

@@ -30,7 +30,7 @@ $post->loadBody($title);
         });
     </script>
 </head>
-<body style="width: <?php $wix->getWidth() ? $wix->getWidth(). "px" : "auto"; ?>">
+<body style="width: <?php print getWixWidth(); ?>">
 
 <!-- POST -->
 <div>

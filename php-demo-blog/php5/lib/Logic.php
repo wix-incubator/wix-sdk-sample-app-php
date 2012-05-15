@@ -27,6 +27,14 @@ define("SETTINGS_DIRECTORY", dirname(__FILE__) . "/../data/settings/");
 define("POSTS_DIRECTORY", dirname(__FILE__) . "/../data/posts/"); // where the posts files sits in
 define("POSTS_SUFFIX", ".txt");
 
+// helper function to get the width with the attribute we want
+// so we can width: getWidth(); - and it will return either Xpx or auto.
+function getWixWidth()
+{
+    $wix = new Wix(); // this only works with contants, but this logic is for this application only.
+    return $wix-> getWidth() ? $wix-> getWidth(). "px" : "auto";
+}
+
 class Post /* one post */
 {
     protected $title;

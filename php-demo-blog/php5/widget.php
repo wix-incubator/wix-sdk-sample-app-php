@@ -15,7 +15,7 @@ $widgetSettings->readSettings();
 ?>
 
 <!-- POSTS LIST -->
-<div style="width: <?php $wix->getWidth() ? $wix->getWidth(). "px" : "auto"; ?>">
+<div style="width: <?php print getWixWidth() ?>">
     <div style="padding: 10px">
         <?php foreach ($posts as $post) : ?>
 
