@@ -74,29 +74,29 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <script src="js/Wix.js" type="text/javascript"></script>
     <script>
         <?php if (!isset($_GET['dontReportHeight'])) { ?>
-            $.getDocHeight = function () {
-                var D = document;
-                return Math.max(Math.max(D.body.scrollHeight, D.documentElement.scrollHeight), Math.max(D.body.offsetHeight, D.documentElement.offsetHeight), Math.max(D.body.clientHeight, D.documentElement.clientHeight));
-            };
+        $.getDocHeight = function () {
+            var D = document;
+            return Math.max(Math.max(D.body.scrollHeight, D.documentElement.scrollHeight), Math.max(D.body.offsetHeight, D.documentElement.offsetHeight), Math.max(D.body.clientHeight, D.documentElement.clientHeight));
+        };
 
-            $(document).ready(function () {
-                // report your application height changes
-                $('img').load(function () {
-                    Wix.reportHeightChange($.getDocHeight());
-                });
-
+        $(document).ready(function () {
+            // report your application height changes
+            $('img').load(function () {
                 Wix.reportHeightChange($.getDocHeight());
             });
-        <?php } ?>
+
+            Wix.reportHeightChange($.getDocHeight());
+        });
+            <?php } ?>
     </script>
 
     <?php
-     if ($_SERVER['REQUEST_METHOD'] == "POST") {
-         print "<script>Wix.refreshApp()</script>"; // refreash the app (APP_SETTINGS_CHANGED)
-     }
+    if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        print "<script>Wix.refreshApp()</script>"; // refreash the app (APP_SETTINGS_CHANGED)
+    }
     ?>
 </head>
-<body>
+<body style="width: <?php $wix->getWidth() ? $wix->getWidth(). "px" : "auto"; ?>">
 
 <!-- HEADER -->
 <div class="center">

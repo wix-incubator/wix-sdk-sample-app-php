@@ -28,7 +28,7 @@ $post->loadBody($title);
         });
     </script>
 </head>
-<body>
+<body style="width: <?php $wix->getWidth() ? $wix->getWidth(). "px" : "auto"; ?>">
 
 <!-- POST -->
 <div>

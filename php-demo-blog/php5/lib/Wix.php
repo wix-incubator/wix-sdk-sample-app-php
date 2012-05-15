@@ -59,14 +59,28 @@ class Wix
      * If inside Wix, it'll return the parent url from the query line,
      * else, we'll return the relative REQUEST_URI for this file
      */
-    public function getParentUrl()
+    public function getSectionUrl()
     {
-        return isset($_GET['parent-url']) ? $_GET['parent-url'] : dirname($_SERVER['REQUEST_URI']);
+        $parentUrl = isset($_GET['section-url']) ? $_GET['section-url'] : null;
+
+        if (!$parentUrl) {
+            // we're not using dirname, becouse if we did not specify a file dirname will give us
+            // the parent directory of the REQUEST_URI. this is a little trick to get the right parent
+            $parentUrl = substr($_SERVER['REQUEST_URI'], 0, strrpos($_SERVER['REQUEST_URI'], "/"));
+        }
+
+        return $parentUrl;
     }
 
     public function getTarget()
     {
-        return isset($_GET['target']) ? $_GET['target'] : "_top";
+        return isset($_GET['target']) ? $_GET['target'] : "_self";
+    }
+
+    public function getWidth()
+    {
+        // get width pixels
+        return isset($_GET['width']) ? $_GET['width'] : null;
     }
 
     // returns your decoded instance - can return null
