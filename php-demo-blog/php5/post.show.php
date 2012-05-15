@@ -1,7 +1,9 @@
 <?php
+require_once("lib/Wix.php");
 require_once("lib/Logic.php");
 
-$title = isset($_GET['title']) ? str_replace("_", " ", $_GET['title']) : "Unknown Posft";
+$wix = new Wix();
+$title = isset($_GET['title']) ? str_replace("_", " ", $_GET['title']) : "Unknown Post";
 
 $post = new Post();
 $post->loadBody($title);
