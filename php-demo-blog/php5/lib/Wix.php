@@ -7,8 +7,8 @@
  */
 
 /* Configurable */
-define("WIX_APP_IP", "128bdc66-326c-5e7c-ce0b-da11314be03e");
-define("WIX_SECRET", "8f3ae4a8-7483-4976-9918-9c3eefa5de5a");
+define("WIX_APP_IP", "1290688b-8389-c7ad-7eef-6daba62ddb84");
+define("WIX_SECRET", "1cd8025b-5c50-42c1-a36f-22261508e124");
 
 class Wix
 {
