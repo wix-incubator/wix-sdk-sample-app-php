@@ -43,7 +43,6 @@ $widgetSettings->readSettings();
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="js/Wix.js" type="text/javascript"></script>
 <script>
-    <?php if (!isset($_GET['dontReportHeight'])) { ?>
     $.getDocHeight = function () {
         var D = document;
         return Math.max(Math.max(D.body.scrollHeight, D.documentElement.scrollHeight), Math.max(D.body.offsetHeight, D.documentElement.offsetHeight), Math.max(D.body.clientHeight, D.documentElement.clientHeight));
@@ -57,5 +56,4 @@ $widgetSettings->readSettings();
 
         Wix.reportHeightChange($.getDocHeight());
     });
-        <?php } ?>
 </script>
