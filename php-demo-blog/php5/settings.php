@@ -72,6 +72,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="js/Wix.js" type="text/javascript"></script>
+    <script>
+        $.getDocHeight = function () {
+            var D = document;
+            return Math.max(Math.max(D.body.scrollHeight, D.documentElement.scrollHeight), Math.max(D.body.offsetHeight, D.documentElement.offsetHeight), Math.max(D.body.clientHeight, D.documentElement.clientHeight));
+        };
+    </script>
 
     <?php
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -172,6 +178,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <br/>
         <input type="submit" value="Save Settings" style="padding: 10px"/>
     </form>
+
+    <br />
+    <button onclick="Wix.reportHeightChange($.getDocHeight() + 50);">More Height!</button>
 </div>
 
 </body>

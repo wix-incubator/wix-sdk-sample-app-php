@@ -38,6 +38,8 @@ $widgetSettings->readSettings();
 
         <?php endforeach; ?>
     </div>
+
+    <button onclick="Wix.reportHeightChange($.getDocHeight() + 50);">More Height!</button>
 </div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
