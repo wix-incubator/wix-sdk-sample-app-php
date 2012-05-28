@@ -32,7 +32,7 @@ define("POSTS_SUFFIX", ".txt");
 function getWixWidth()
 {
     $wix = new Wix(); // this only works with contants, but this logic is for this application only.
-    return $wix-> getWidth() ? $wix-> getWidth(). "px" : "auto";
+    return $wix->getWidth() ? $wix->getWidth() . "px" : "auto";
 }
 
 class Post /* one post */

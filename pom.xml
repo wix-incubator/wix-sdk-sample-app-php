@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.wixpress.apps</groupId>
+    <artifactId>sample-app-php</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Sample PHP application</name>
+    <url>${project_url}/${artifactId}</url>
+
+    <parent>
+        <groupId>com.wixpress.common</groupId>
+        <artifactId>wix-java-parent</artifactId>
+        <version>LATEST</version>
+    </parent>
+
+    <modules>
+    </modules>
+
+    <developers>
+        <developer>
+            <name>Yoav Abrahami</name>
+            <email>yoav@wix.com</email>
+        </developer>
+        <developer>
+            <name>Elad Laufer</name>
+            <email>elad@wix.com</email>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <site>
+            <id>apidocs</id>
+            <url>${site_full_path}/${artifactId}</url>
+        </site>
+    </distributionManagement>
+
+</project>

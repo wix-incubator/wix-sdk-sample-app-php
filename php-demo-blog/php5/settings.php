@@ -179,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <input type="submit" value="Save Settings" style="padding: 10px"/>
     </form>
 
-    <br />
+    <br/>
     <button onclick="Wix.reportHeightChange($.getDocHeight() + 50);">More Height!</button>
 </div>
 
