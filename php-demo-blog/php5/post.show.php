@@ -23,7 +23,7 @@ $post->loadBody($title);
     </style>
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="js/Wix.js" type="text/javascript"></script>
+    <script src="http://static.wix.com/services/wix-public/1.8.0/js/Wix.js" type="text/javascript"></script>
     <script>
         $(document).ready(function () {
             Wix.reportHeightChange($('body').outerHeight(true));
